@@ -1,4 +1,4 @@
-enum KeyCode {
+enum KeyCodes {
   ArrowUp = 38,
   ArrowLeft = 39,
   ArrowRight = 37,
@@ -94,7 +94,7 @@ class Pong extends HTMLCanvasElement {
   constructor() {
     super();
     const context: CanvasRenderingContext2D | boolean =
-      this.getContext("2d") ?? false;
+      this.getContext("2d") || false;
     if (context) {
       this.context = context;
     }
@@ -131,4 +131,10 @@ class Pong extends HTMLCanvasElement {
   }
 }
 
-customElements.define("pong-game", Pong);
+window.addEventListener(
+  "load",
+  () => {
+    customElements.define("pong-game", Pong);
+  },
+  { once: true }
+);
