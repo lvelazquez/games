@@ -1,18 +1,18 @@
-<html>
+<!doctype html>
+<html lang="en">
   <head>
-    <title>Games</title>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Pong in TypeScript on an HTML canvas, with keyboard and touch controls." />
+    <link rel="icon" href="data:," />
+    <title>Games - Pong</title>
   </head>
-
   <body>
-    <pong-game>
-      <style type="text/css">
-        canvas {
-          width: 100%;
-          height: 100%;
-        }
-      </style>
-    </pong-game>
-    <script src="./src/pong/index.ts"></script>
+    <main>
+      <h1>Pong</h1>
+      <pong-game></pong-game>
+      <noscript>This game needs JavaScript.</noscript>
+    </main>
+    <script type="module" src="/src/pong/index.ts"></script>
   </body>
 </html>
