@@ -38,4 +38,4 @@ Game rules live in `src/pong/logic.ts` as pure functions (no DOM), tuned by `src
 
 ## Deploy
 
-`.github/workflows/pages.yml` builds and publishes `dist/` to GitHub Pages on every push to `main`. Enable it once under Settings > Pages > Source: GitHub Actions. The build uses a relative base path, so it also works from any static host.
+`npm run build` writes a static site to `dist/` with a relative base path, so it can be served from any static host or a GitHub Pages sub-path. For GitHub Pages, set Settings > Pages > Source to GitHub Actions and publish `dist/` with `actions/upload-pages-artifact` and `actions/deploy-pages` after `npm ci && npm run build`.
